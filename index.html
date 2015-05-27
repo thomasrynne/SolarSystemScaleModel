@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Scale Solar System</title>
+    <style>
+      table { table-layout:fixed; width: 100%}
+      .th { width: 33% }
+      td { text-align: center; }
+      input { text-align: right; width: 5em; }
+      body { margin-left: auto; margin-right: auto; width: 40em; }
+      #main { margin-top: 1em; }
+      .units { width: 5em; }
+      .error { background: red; color: white }
+    </style>
+</head>
+<body>
+  <h1>Solar System Scale Model</h1>
+  <p>Modify any value and the other values will update to remain in scale.</p>
+
+  <div id="main"></div>
+
+  <script src="./mithril-0.1.30.js"></script>
+  <script src="./base/target/scala-2.11/base-fastopt.js"></script>
+  <script src="./base/target/scala-2.11/base-launcher.js"></script>
+</body>
+</html>
