@@ -4,7 +4,7 @@ lazy val root = project.in(file(".")).aggregate(base, integration)
 
 lazy val base = project.in(file("base")).settings(
   scalaVersion := "2.11.6",
-  libraryDependencies += "com.lihaoyi" %%% "scalatags" % "0.5.2",
+  libraryDependencies += "com.lihaoyi" %%% "scalatags" % "0.6.0",
   libraryDependencies += "com.lihaoyi" %%% "utest" % "0.3.0" % "test",
   testFrameworks += new TestFramework("utest.runner.Framework"),
   persistLauncher in Compile := true
