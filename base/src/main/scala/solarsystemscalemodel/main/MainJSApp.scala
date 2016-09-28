@@ -1,12 +1,12 @@
+
 package solarsystemscalemodel.main
 
 import org.scalajs.dom.Element
-import solarsystemscalemodel.core.{UOM, MeasurementSystem, Distance, ModelSolarSystem}
 import solarsystemscalemodel.core.ModelSolarSystem._
+import solarsystemscalemodel.core.{Distance, MeasurementSystem, ModelSolarSystem, UOM}
 
 import scala.scalajs.js
 import scala.scalajs.js.annotation.{JSExport, JSName}
-import scalatags.Text.short
 
 /**
  * Renders a ModelSolarSystem.Model to a virtual DOM using Mithril.
@@ -56,9 +56,8 @@ object MainJSApp extends js.JSApp {
       def isSun = name == "Sun"
     }
     import solarsystemscalemodel.mithril.MithrilBundle.attrs._
-    import solarsystemscalemodel.mithril.MithrilBundle.short._
-    import solarsystemscalemodel.mithril.MithrilBundle.tags._
-    import solarsystemscalemodel.mithril.MithrilBundle.short.SeqFrag
+    import solarsystemscalemodel.mithril.MithrilBundle.short.{SeqFrag, _}
+
     @JSExport
     def view() = {
       def createDistanceInput(planet:CelestialBody, setting:Measurement, distance:Distance) = {
@@ -119,7 +118,7 @@ object MainJSApp extends js.JSApp {
         },
         state.model.measurementSystem.units.map { unit => option(value:=unit.name,unit.name) })
     }
-    
+
     def textInput(distanceInput:DistanceInput) = {
       val onInputFunction = { (event: js.Dynamic) => {
         val text = event.target.value.asInstanceOf[String]
@@ -138,3 +137,4 @@ object MainJSApp extends js.JSApp {
   }
 
 }
+
